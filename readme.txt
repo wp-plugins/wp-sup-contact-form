@@ -9,7 +9,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
-=== Description ===
+== Description ==
 Is a plugin where you can display contact form field on the post/page easy using Shortcode. This contact form support for file attachment or file upload.
 
 Feature :
@@ -19,7 +19,7 @@ Feature :
 4. Page Options
 5. User friendly form
 
-=== Installation ===
+== Installation ==
 1. Upload the 'wp-sup-contact-form' folder to the '/wp-content/plugins/' directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Go to the Settings > Sup Contact Form
@@ -27,14 +27,14 @@ Feature :
 5. Next Create a Page or Post and insert this short code to the post or page [wpscf_display]
 6. You are done.
 
-=== Frequently Asked Questions ===
+== Frequently Asked Questions ==
 
-=== Screenshots ===
+== Screenshots ==
 
 1. Contact Form Display on Page/Post
 2. Contact Form Setting Page
 
-=== Changelog ===
+== Changelog ==
 
 = 0.0.1 =
 * Initial release
