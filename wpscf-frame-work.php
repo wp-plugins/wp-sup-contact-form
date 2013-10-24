@@ -185,7 +185,7 @@ function process_form() {
 		} else {
 			echo '<div id="formfeedback"><h3>Thank You!</h3>'.wpscf_prx('success').'</div>';
 			unset($_SESSION['myForm']);
-			print_form();
+			call_wpscf_form();
 			
 		} // end of if !mail
 		
@@ -195,7 +195,7 @@ function process_form() {
 				echo " - $msg<br />\n";
 			} // end of foreach
 		echo 'Please try again</div>';
-		print_form();
+		call_wpscf_form();
 	} //end of if(empty($errors))
 
 } // end of process_form()
