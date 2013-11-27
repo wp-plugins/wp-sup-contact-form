@@ -40,5 +40,3 @@ Feature :
 * Initial release
 
 = 0.0.2 =
-* Added captcha
-* Restyling admin setting
