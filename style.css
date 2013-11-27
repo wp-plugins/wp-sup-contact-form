@@ -11,7 +11,7 @@ div.wpscf_wrap {
 	-moz-border-radius: 7px;
 	-webkit-border-radius: 7px;
 }
-div.wpscf_wrap p { margin:0 0 5px;padding:0}
+div.wpscf_wrap p { margin:0 0 10px;padding:0}
 div.wpscf_wrap label {
 	float: left;
 	width: 85px;
@@ -19,7 +19,7 @@ div.wpscf_wrap label {
 div.wpscf_wrap input {width: 50%;height: 25px;padding:0;margin:0}
 div.wpscf_wrap textarea {width:80%;padding:0;margin:0}
 
-div.wpscf_wrap input#submit {
+div.wpscf_wrap p input#submit {
 	width: auto;
 	height: 30px;
 	padding: 0 15px;
@@ -31,15 +31,23 @@ div.wpscf_wrap input#submit {
 
 div.wpscf_wrap .required {color: red;}
 
-#formfeedback {
-	background: #fdfbab;
-	padding: 10px 10px;
+#success-message {
+	background: #C0ECAA;
+	padding: 10px 15px;
 	margin: 0 0 15px;
-	border: 1px solid #E9E793;
-	font-size:12px;
+	border: 1px solid #82C485;
+	font-size: 12px;
 }
 
-#formfeedback h3{font-size:16px;font-weight:normal;margin:0;padding:0}
+#error-message {
+	background: #FFCDCD;
+	padding: 10px 15px;
+	margin: 0 0 15px;
+	border: 1px solid #DB969E;
+	font-size: 12px;
+}
+
+#success-message h3, #error-message h3{font-size:16px;font-weight:normal;margin:0;padding:0}
 
 /* Admin Setting Style
 ========================================================= */
@@ -110,7 +118,26 @@ div.wpscf_wrap .required {color: red;}
 	font-size: 13px;
 	padding: 6px 7px;
 }
-
+.wpscf-sidebar {
+float: left;
+width: 350px;
+margin: 0 0 0 25px;
+padding: 15px;
+border: 1px solid #ccc;
+background: #eaeaea;
+}
+.wpscf-widget {
+margin: 0 0 20px 0;
+padding: 10px;
+background: #fafafa;
+border: 1px solid #ccc;
+}
+.wpscf-widget h2{
+font-size: 14px;
+padding: 0 0 5px 0;
+margin: 0;
+border-bottom: 1px solid #ccc;
+}
 #wpscf-footer {
 	clear: both;
 	height: 47px;

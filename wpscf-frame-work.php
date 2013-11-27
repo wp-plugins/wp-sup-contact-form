@@ -1,6 +1,4 @@
 <?php
-//start session
-session_start();
 
 /**
  * Contact form Plugin for Wordpress with file attachment
@@ -8,14 +6,23 @@ session_start();
  * Author: Usupdotnet <http://usup.net/>
  * 
  */
+session_start();
 
 // prints form
 function call_wpscf_form(){
 ?>
+ <script type="text/javascript">
+ 		function refresh()
+		{
+       document.getElementById('captcha-image-new').src='http://localhost/wordpress/wp-content/plugins/wp-sup-contact-form/captcha.php?'+Math.random();
+       document.getElementById('captcha').focus();
+		}
+        </script>
 <div class="wpscf_wrap">
-<p style="border-bottom:1px solid #B9B9B9;padding:0 0 7px;"><?php echo wpscf_prx('wpscf_instruction') ?></p>
+<p style="border-bottom:1px solid #B9B9B9;padding:0 0 7px;font-weight:bold"><?php echo wpscf_prx('wpscf_instruction') ?></p>
 <p><span class="required">*</span> Required fields</p>
 	<form method="post" action="" id="uploadform" enctype="multipart/form-data">
+
 	<p><label for="namefrom">Name <span class="required">*</span></label>
 	<input name="namefrom" id="namefrom" type="text" class="field" value="<?= $_SESSION['myForm']['namefrom']; ?>" tabindex="1"/></p>
 	
@@ -36,12 +43,19 @@ function call_wpscf_form(){
 		<input name="attachment" id="attachment" type="file" tabindex="7"></p>
 		<p><small>1 file only, max file size <?php echo wpscf_prx('max_file_size'); ?>kb. Allowed file formats are .zip. rar .doc .pdf .txt</small></p>
 	<?php endif; ?>
+
+	 <p>
+	<label for="captchatext">Security code</label>
+	<img style="float:left;width:100px;height:30px;margin:0 5px 0 0" src="http://localhost/wordpress/wp-content/plugins/wp-sup-contact-form/captcha.php" id="captcha-image-new" alt="Captcha Image" />
+	<input style="width:75px;" name="captchatext" type="text" value="" tabindex="8"/> <a style="cursor:pointer;color:blue"  onClick="javascript:refresh();"  id="change-image">Click here to refresh</a>
+	 </p>
 	
-	<p><input type="submit" name="submit" id="submit" value="Send Email!"  tabindex="8"/></p>
+	<p><input type="submit" name="submit" id="submit" value="Send Email!"  tabindex="9"/></p>
 	<p><input type="hidden" name="submitted"  value="true" /></p>
-<br />
+		<br />
 	</form>
 	<div style="display:<?php echo wpscf_prx('wpscf_link') ?>" class="wpscf_link">Powered by : <a href="http://usup.net">WP Sup Contact Form</a></div>
+ 
 <div style="clear:both"> </div>
 </div>
 <?php
@@ -96,6 +110,12 @@ function process_form() {
 	if (empty($_POST['comments']) ) {
 		$errors[]='You forgot to enter your message';
 		}
+
+// check the captcha
+	if ($_SESSION['img_ver'] != $_POST['captchatext']) {
+   	// change this to what you want to do if something goes wrong  
+	$errors[]='not a match for the captcha';
+	}
 		
  	// checks for required file
 	if($requirefile=="true") {
@@ -183,14 +203,14 @@ function process_form() {
 		if(!mail($to,$subject,$message,$headers)) {
 			exit("Mail could not be sent. Sorry! An error has occurred, please report this to the website administrator.\n");
 		} else {
-			echo '<div id="formfeedback"><h3>Thank You!</h3>'.wpscf_prx('success').'</div>';
+			echo '<div id="success-message"><h3>Thank You!</h3>'.wpscf_prx('success').'</div>';
 			unset($_SESSION['myForm']);
 			call_wpscf_form();
 			
 		} // end of if !mail
 		
 	} else { //report the errors
-		echo '<div id="formfeedback"><h3>Error!</h3>'.wpscf_prx('error').'<br />';
+		echo '<div id="error-message"><h3>Error!</h3>'.wpscf_prx('error').'<br />';
 		foreach ($errors as $msg) { //prints each error
 				echo " - $msg<br />\n";
 			} // end of foreach

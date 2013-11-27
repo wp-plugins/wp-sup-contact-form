@@ -1,17 +1,17 @@
 <?php
 /*
 Plugin Name: WP Sup Contact Form
-Plugin URI: http://theusup.com
+Plugin URI: http://dev.templatemaxs.com/2013/11/wp-sup-contact-form-wordpress-plugin.html
 Description:  WP Sup Contact Form, display contact form field on the post/page easy using Shortcode. This contact form support for file attachment or file upload.
-Version: 0.0.1
+Version: 0.0.2
 Author: Usupdotnet
-Author URI: http://u-sup.blogspot.com/
+Author URI: http://dev.templatemaxs.com/
 License: GPLv2 or later
 */
 
 require_once dirname( __FILE__ ) . '/wpscf-frame-work.php';
 require_once dirname( __FILE__ ) . '/wpscf-settings.php';
-
+ 
 // enqueue the scripts and style
 function wpscf_plugin_scripts(){
     wp_register_style('wpscf_plugin_style', plugin_dir_url( __FILE__ ).'style.css');

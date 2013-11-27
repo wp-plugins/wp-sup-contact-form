@@ -108,7 +108,7 @@ function wpscf_admin() {
 	<!-- BEGIN wrapper -->
 	<div id="to_wrapper"> 
 	<div class="wpscf-admin-head">
-		<div id="icon-wpscfoptions-general" class="icon32"><br></div>
+		<div id="icon-options-general" class="icon32"><br></div>
 		<h2><?php echo $pluginname; ?></h2>
 	</div>
 	<!-- BEGIN content -->
@@ -163,7 +163,38 @@ function wpscf_admin() {
 		?>
 	</div>
 	<!-- END content -->
-	
+		<!-- Begin Sidebar -->
+	<div class="wpscf-sidebar">
+
+		<div class="wpscf-widget">
+		<h2>How to</h2>
+		<p>
+			WP sup contact form has been setup to diplaying a contact form to the post or page with shortcode.<br/>
+		
+			<br/>
+			<b>Displaying Contact Form in the post/page</b><br/>
+			Place shortcode below to the post/page :<br/>
+			<span style="color:red;font-weight:bold">[wpscf_display]</span>
+		</p>
+		</div>
+
+		<div class="wpscf-widget">
+		<h2>About</h2>
+		<p>
+			WPSCF: WP sup contact form created by Usupdotnet / <a href="http://dev.templatemaxs.com">Dev Templatemaxs</a><br/><br/>
+			If you like this plugin and find it useful, help keep this plugin free and actively developed by clicking the donate button or send me a gift from my Amazon wishlist. Also, don't forget to follow me on Twitter.
+			<br/><br/>
+		 	<a href="http://dev.templatemaxs.com/p/donate.html" target="_blank">Donate Page</a> | 
+		 	<a href="http://www.amazon.com/gp/registry/wishlist/16HXF07JWPO9E/ref=cm_wl_rlist_go_o" target="_blank">Send Amazon Gift</a> | 
+		 	<a href="http://dev.templatemaxs.com/2013/11/wp-sup-contact-form-wordpress-plugin.html" target="_blank" title="WPSCF : Contact Form Wordpress Plugin">Support Page</a>
+			<br/><br/>
+			My other Plugin : <a href="http://wordpress.org/plugins/sup-posts-widget/" target="_blank">Sup Posts Widget</a>
+			<br/><br/>		
+		Sponsored by : <a href="http://jogjatouring.com/" title="Paket Wisata Jogja" target="_blank">Paket Wisata Jogja</a> | <a href="http://indojavatours.com/" target="_blank" title="Bromo Tour">Bromo Tour</a>
+		</p>
+		</div>
+	</div>
+	<!-- END Sidebar -->
 	<div id="wpscf-footer" style="clear:both">
 		<p>
 		<input  class="button-primary" name="save" type="submit" value="Save changes" />    
