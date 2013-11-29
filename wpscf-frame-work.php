@@ -11,13 +11,7 @@ session_start();
 // prints form
 function call_wpscf_form(){
 ?>
- <script type="text/javascript">
- 		function refresh()
-		{
-       document.getElementById('captcha-image-new').src='http://localhost/wordpress/wp-content/plugins/wp-sup-contact-form/captcha.php?'+Math.random();
-       document.getElementById('captcha').focus();
-		}
-        </script>
+
 <div class="wpscf_wrap">
 <p style="border-bottom:1px solid #B9B9B9;padding:0 0 7px;font-weight:bold"><?php echo wpscf_prx('wpscf_instruction') ?></p>
 <p><span class="required">*</span> Required fields</p>
@@ -44,11 +38,26 @@ function call_wpscf_form(){
 		<p><small>1 file only, max file size <?php echo wpscf_prx('max_file_size'); ?>kb. Allowed file formats are .zip. rar .doc .pdf .txt</small></p>
 	<?php endif; ?>
 
-	 <p>
+	<?php if (wpscf_prx('allow_recaptcha')=='enable'): ?>
+	<p style="clear:both">
 	<label for="captchatext">Security code</label>
-	<img style="float:left;width:100px;height:30px;margin:0 5px 0 0" src="http://localhost/wordpress/wp-content/plugins/wp-sup-contact-form/captcha.php" id="captcha-image-new" alt="Captcha Image" />
-	<input style="width:75px;" name="captchatext" type="text" value="" tabindex="8"/> <a style="cursor:pointer;color:blue"  onClick="javascript:refresh();"  id="change-image">Click here to refresh</a>
-	 </p>
+	<div style="width:400px;float:left;display: block;margin: 0 0 10px 0;">
+	 <script type="text/javascript">
+		 var RecaptchaOptions = {
+		    theme : '<?php echo wpscf_prx('recaptcha_scheme') ?>'
+		 };
+ 	</script>
+  	<script type="text/javascript" src="http://api.recaptcha.net/challenge?k=<?php echo wpscf_prx('recaptcha_public_key') ?>"></script>
+  		<noscript>
+    		<iframe src="http://api.recaptcha.net/noscript?k=<?php echo wpscf_prx('recaptcha_public_key') ?>" height="300" width="500" frameborder="0"></iframe>
+    		<textarea name="recaptcha_challenge_field" rows="3" cols="60"></textarea>
+    		<input type="hidden" name="recaptcha_response_field" value="manual_challenge">
+  		</noscript>
+  	<!-- END RECAPTCHA CODE -->
+	</div>
+  	</p>
+
+	<?php endif; ?>
 	
 	<p><input type="submit" name="submit" id="submit" value="Send Email!"  tabindex="9"/></p>
 	<p><input type="hidden" name="submitted"  value="true" /></p>
@@ -111,11 +120,18 @@ function process_form() {
 		$errors[]='You forgot to enter your message';
 		}
 
-// check the captcha
-	if ($_SESSION['img_ver'] != $_POST['captchatext']) {
-   	// change this to what you want to do if something goes wrong  
-	$errors[]='not a match for the captcha';
-	}
+// check the captcha  
+
+	if (wpscf_prx('allow_recaptcha')=='enable'){
+		require_once(WP_PLUGIN_DIR.'/wp-sup-contact-form/recaptchalib.php');
+          	$resp = recaptcha_check_answer(wpscf_prx('recaptcha_private_key'),$_SERVER["REMOTE_ADDR"],$_POST["recaptcha_challenge_field"],$_POST["recaptcha_response_field"]);
+				  if (!$resp->is_valid){
+				    $errors[] = "Security Code/reCAPTCHA wasn't entered correctly";
+				  }
+				}
+ 
+				 
+			 
 		
  	// checks for required file
 	if($requirefile=="true") {

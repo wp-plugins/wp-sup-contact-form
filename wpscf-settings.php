@@ -53,6 +53,35 @@ $wpscfoptions = array (
 		"type"=>"open",
 		),
 	array(  
+		"name"=>"Enable Recaptcha",	
+		"id"=>$shortname."_allow_recaptcha",
+		"std"=>"disable",
+		"type"=>"select",
+		"wpscfoptions"=>array('disable','enable'),
+		"note"=>'Get reCaptcha Key <a href="https://www.google.com/recaptcha/admin/create"><span style="color:red">Signup Here</span></a>'),
+	array(  
+		"name"=>"Color Scheme",	
+		"id"=>$shortname."_recaptcha_scheme",
+		"std"=>"disable",
+		"type"=>"select",
+		"wpscfoptions"=>array('red','white','blackglass','clean'),
+		"note"=>'reCaptcha Color Theme'),
+	array(
+		"name"=>"Publick Key",
+		"id"=>$shortname."_recaptcha_public_key",
+		"std"=>"",
+		"type"=>"text",
+		"note"=>"Recaptcha Public Key"
+		),
+	array(
+		"name"=>"Private Key",
+		"id"=>$shortname."_recaptcha_private_key",
+		"std"=>"",
+		"type"=>"text",
+		"note"=>"Recaptcha Private Key"
+		),
+
+	array(  
 		"name"=>"Attachment File",	
 		"id"=>$shortname."_allow_attc",
 		"std"=>"disable",
