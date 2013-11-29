@@ -38,3 +38,11 @@ Feature :
 
 = 0.0.1 =
 * Initial release
+
+= 0.0.2 =
+* Added Captcha
+* Restyling admin setting
+
+= 0.0.3 =
+* Changed recaptcha method
+* Added reCaptcha Theme
