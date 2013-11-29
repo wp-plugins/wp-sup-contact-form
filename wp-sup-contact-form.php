@@ -3,7 +3,7 @@
 Plugin Name: WP Sup Contact Form
 Plugin URI: http://dev.templatemaxs.com/2013/11/wp-sup-contact-form-wordpress-plugin.html
 Description:  WP Sup Contact Form, display contact form field on the post/page easy using Shortcode. This contact form support for file attachment or file upload.
-Version: 0.0.2
+Version: 0.0.3
 Author: Usupdotnet
 Author URI: http://dev.templatemaxs.com/
 License: GPLv2 or later
