@@ -1,0 +1,165 @@
+/* Contact Form Style
+========================================== */
+div.wpscf_wrap {
+	width: 500px;
+	background: #F5F5F5;
+	font-size:12px;
+	border: 1px solid #B9B9B9;
+	padding: 15px 20px;
+	border-radius: 7px;
+	-o-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+div.wpscf_wrap p { margin:0 0 10px;padding:0}
+div.wpscf_wrap label {
+	float: left;
+	width: 85px;
+}
+div.wpscf_wrap input {width: 50%;height: 25px;padding:0;margin:0}
+div.wpscf_wrap textarea {width:80%;padding:0;margin:0}
+
+div.wpscf_wrap p input#submit {
+	width: auto;
+	height: 30px;
+	padding: 0 15px;
+	margin: 10px 0 0 0;
+	cursor: pointer;
+	float: left;
+	display: block;
+}
+
+div.wpscf_wrap .required {color: red;}
+
+#success-message {
+	background: #C0ECAA;
+	padding: 10px 15px;
+	margin: 0 0 15px;
+	border: 1px solid #82C485;
+	font-size: 12px;
+}
+
+#error-message {
+	background: #FFCDCD;
+	padding: 10px 15px;
+	margin: 0 0 15px;
+	border: 1px solid #DB969E;
+	font-size: 12px;
+}
+
+#success-message h3, #error-message h3{font-size:16px;font-weight:normal;margin:0;padding:0}
+
+/* Admin Setting Style
+========================================================= */
+#reminder {
+	clear: both;
+	display: none;
+	font-weight: bold;
+	font-size: 0.9em;
+	color: #ff0000;
+	padding-top: 10px;
+	width: 340px;
+}
+
+
+.wpscf-admin-head {
+	height: 65px;
+}
+
+.wpscf-admin-head h2 {
+		padding: 18px 0 0 0;
+		color: #464646;
+		font-family: "Arial";
+		font-weight: normal;
+		font-size: 23px;
+		text-shadow: 0 1px 0 #FFFFFF;
+	}
+
+
+#wpscf-content {
+	width: 650px;
+	float: left;
+	padding:0;
+	margin:0;
+}
+
+#wpscf-content h3 {
+	padding:8px 10px;
+	margin: 0;
+}
+
+.postbox .inside {
+	margin: 0;
+	padding: 5px 15px;
+	position: relative;
+}
+ 
+
+.inside p  {
+	width:100%;
+	float: left;
+}
+.inside p label {
+	width: 200px;
+	float: left;
+	font-size: 13px;
+}
+
+.inside p input {
+	width: 200px;
+	float: left;
+	font-size: 13px;
+	padding: 6px 7px;
+}
+.inside p textarea {
+	width: 350px;
+	height:85px;
+	float: left;
+	font-size: 13px;
+	padding: 6px 7px;
+}
+.wpscf-sidebar {
+float: left;
+width: 350px;
+margin: 0 0 0 25px;
+padding: 15px;
+border: 1px solid #ccc;
+background: #eaeaea;
+}
+.wpscf-widget {
+margin: 0 0 20px 0;
+padding: 10px;
+background: #fafafa;
+border: 1px solid #ccc;
+}
+.wpscf-widget h2{
+font-size: 14px;
+padding: 0 0 5px 0;
+margin: 0;
+border-bottom: 1px solid #ccc;
+}
+#wpscf-footer {
+	clear: both;
+	height: 47px;
+	position: relative;
+}
+	#save {
+		width: 122px; height: 25px;
+		text-indent: -9999px;
+		outline: none;
+		border: 0;
+		background: url(save.gif) no-repeat 0 0;
+		border-radius: 0;
+		position: absolute;
+		top: 10px; left: 650px;
+	}
+
+.wpscf_link {
+	font-size: 10px;
+	float: right;
+	clear: both;
+	text-decoration: none;
+}
+.wpscf_link a{text-decoration: none;}
+
+/* Responsive Design */
