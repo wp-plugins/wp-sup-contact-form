@@ -1,6 +1,6 @@
 <?php
 /*
- * This is a PHP library that handles calling reCAPTCHA.
+ * This is a PHP library that  handles calling reCAPTCHA.
  *    - Documentation and latest version
  *          http://recaptcha.net/plugins/php/
  *    - Get a reCAPTCHA API Key

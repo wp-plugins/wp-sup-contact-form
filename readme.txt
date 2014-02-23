@@ -3,8 +3,8 @@ Contributors: Usupdotnet
 Donate link: http://dev.templatemaxs.com/p/donate.html
 Tags: contact form, contact form builder, contact form plugin, contact forms, contact us, feedback form, form, form builder, web form
 Requires at least: 3.3
-Tested up to: 3.7.1
-Stable tag: 0.0.3
+Tested up to: 3.8.1
+Stable tag: 3.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,3 +46,8 @@ Feature :
 = 0.0.3 =
 * Changed recaptcha method
 * Added reCaptcha Theme
+
+= 0.0.4 =
+* Changed recaptcha method
+* Added reCaptcha Theme
+* Added Responsive Form 

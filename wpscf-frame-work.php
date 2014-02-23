@@ -3,7 +3,7 @@
 /**
  * Contact form Plugin for Wordpress with file attachment
  * Release Date: 23/10/2013
- * Author: Usupdotnet <http://usup.net/>
+ * Author : Usupdotnet <http://usup.net/>
  * 
  */
 session_start();
