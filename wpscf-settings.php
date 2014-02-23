@@ -213,22 +213,18 @@ function wpscf_admin() {
 			WPSCF: WP sup contact form created by Usupdotnet / <a href="http://dev.templatemaxs.com">Dev Templatemaxs</a><br/><br/>
 			If you like this plugin and find it useful, help keep this plugin free and actively developed by clicking the donate button or send me a gift from my Amazon wishlist. Also, don't forget to follow me on Twitter.
 			<br/><br/>
+			<b>Please Donate to help us continue this Plugin.</b><br/><br/>	
+			<center>
+			<a href="http://dev.templatemaxs.com/p/donate.html" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG_global.gif"/></a>
+			</center>
+			<br/><br/>
 		 	<a href="http://dev.templatemaxs.com/p/donate.html" target="_blank">Donate Page</a> | 
 		 	<a href="http://www.amazon.com/gp/registry/wishlist/16HXF07JWPO9E/ref=cm_wl_rlist_go_o" target="_blank">Send Amazon Gift</a> | 
 		 	<a href="http://dev.templatemaxs.com/2013/11/wp-sup-contact-form-wordpress-plugin.html" target="_blank" title="WPSCF : Contact Form Wordpress Plugin">Support Page</a>
 			<br/><br/>
 			My other Plugin : <a href="http://wordpress.org/plugins/sup-posts-widget/" target="_blank">Sup Posts Widget</a>
 			<br/><br/>	
-			<h3>Donate</h3>
-			Please Donate to help us continue this Plugin.	<br/>
-			<center>
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-				<input type="hidden" name="cmd" value="_s-xclick">
-				<input type="hidden" name="hosted_button_id" value="KDH4CWGRVHVF6">
-				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
-				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-			</form>
-			</center>
+ 
 		<br/>
 		Sponsored by : <a href="http://jogjatouring.com/" title="Paket Wisata Jogja" target="_blank">Paket Wisata Jogja</a> | <a href="http://indojavatours.com/" target="_blank" title="Bromo Tour">Bromo Tour</a>
 		</p>
