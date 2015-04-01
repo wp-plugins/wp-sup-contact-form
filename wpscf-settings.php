@@ -210,23 +210,23 @@ function wpscf_admin() {
 		<div class="wpscf-widget">
 		<h2>About</h2>
 		<p>
-			WPSCF: WP sup contact form created by Usupdotnet / <a href="http://dev.templatemaxs.com">Dev Templatemaxs</a><br/><br/>
+			WPSCF: WP sup contact form created by UspDev / <a href="http://uspdev.net/">Blogging Tips for Blogger</a><br/><br/>
 			If you like this plugin and find it useful, help keep this plugin free and actively developed by clicking the donate button or send me a gift from my Amazon wishlist. Also, don't forget to follow me on Twitter.
 			<br/><br/>
 			<b>Please Donate to help us continue this Plugin.</b><br/><br/>	
 			<center>
-			<a href="http://dev.templatemaxs.com/p/donate.html" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG_global.gif"/></a>
+			<a href="http://uspdev.net/donate-to-uspdev/" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG_global.gif"/></a>
 			</center>
 			<br/><br/>
-		 	<a href="http://dev.templatemaxs.com/p/donate.html" target="_blank">Donate Page</a> | 
+		 	<a href="http://uspdev.net/donate-to-uspdev/" target="_blank">Donate Page</a> | 
 		 	<a href="http://www.amazon.com/gp/registry/wishlist/16HXF07JWPO9E/ref=cm_wl_rlist_go_o" target="_blank">Send Amazon Gift</a> | 
-		 	<a href="http://dev.templatemaxs.com/2013/11/wp-sup-contact-form-wordpress-plugin.html" target="_blank" title="WPSCF : Contact Form Wordpress Plugin">Support Page</a>
+		 	<a href="http://uspdev.net/projects/wpscf-contact-form-wordpress-plugins/" target="_blank" title="WPSCF : Contact Form Wordpress Plugin">Support Page</a>
 			<br/><br/>
 			My other Plugin : <a href="http://wordpress.org/plugins/sup-posts-widget/" target="_blank">Sup Posts Widget</a>
 			<br/><br/>	
  
 		<br/>
-		Sponsored by : <a href="http://jogjatouring.com/" title="Paket Wisata Jogja" target="_blank">Paket Wisata Jogja</a> | <a href="http://indojavatours.com/" target="_blank" title="Bromo Tour">Bromo Tour</a>
+		Sponsored by : <a href="http://iwebpoints.com/" title="Free Web Hosting" target="_blank">Free Web Hosting</a> | <a href="http://indojavatours.com/" target="_blank" title="Bromo Tour">Bromo Tour</a>
 		</p>
 		</div>
 	</div>

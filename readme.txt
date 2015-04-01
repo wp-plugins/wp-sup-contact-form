@@ -1,9 +1,9 @@
 === Wp Sup Contact Form ===
-Contributors: Usupdotnet
-Donate link: http://dev.templatemaxs.com/p/donate.html
+Contributors: Uspdev
+Donate link: http://uspdev.net/donate-to-uspdev
 Tags: contact form, contact form builder, contact form plugin, contact forms, contact us, feedback form, form, form builder, web form
 Requires at least: 3.3
-Tested up to: 3.8.1
+Tested up to: 4.1.1
 Stable tag: 3.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -51,3 +51,13 @@ Feature :
 * Changed recaptcha method
 * Added reCaptcha Theme
 * Added Responsive Form 
+
+= 0.0.5 =
+* Changed recaptcha method
+* Added reCaptcha Theme
+* Added Responsive Form 
+
+= 0.6 =
+* Fix Spam Message and some bug
+* some css revision
+* File Attachement Update Method

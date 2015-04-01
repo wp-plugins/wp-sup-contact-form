@@ -63,7 +63,7 @@ function call_wpscf_form(){
 	<p><input type="hidden" name="submitted"  value="true" /></p>
 		<br />
 	</form>
-	<div style="display:<?php echo wpscf_prx('wpscf_link') ?>" class="wpscf_link">Powered by : <a href="http://usup.net">WP Sup Contact Form</a></div>
+	<div style="display:<?php echo wpscf_prx('wpscf_link') ?>" class="wpscf_link">Powered by : <a href="http://uspdev.net/projects/wpscf-contact-form-wordpress-plugins/" title="WP Sup Contact Form">WP Sup Contact Form</a></div>
  
 <div style="clear:both"> </div>
 </div>
@@ -168,27 +168,29 @@ function process_form() {
 		$fileatt_type = $_FILES['attachment']['type'];
 		$fileatt_name = $_FILES['attachment']['name'];
 		
-		// Headers
-		$headers = "From: $emailfrom";
 		
 		// create a boundary string. It must be unique
 		  $semi_rand = md5(time());
 		  $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
-
-		  // Add the headers for a file attachment
-		  $headers .= "\nMIME-Version: 1.0\n" .
-		              "Content-Type: multipart/mixed;\n" .
-		              " boundary=\"{$mime_boundary}\"";
-
-		  // Add a multipart boundary above the plain message
-		  $message ="This is a multi-part message in MIME format.\n\n";
-		  $message.="--{$mime_boundary}\n";
-		  $message.="Content-Type: text/plain; charset=\"iso-8859-1\"\n";
-		  $message.="Content-Transfer-Encoding: 7bit\n\n";
-		  $message.="From: ".$namefrom."\n";
-		  $message.="Phone: ".$phone."\n";
-		  $message.="Comments: ".$comments."\n\n";
 		
+		$headers =
+		"MIME-Version: 1.0\r\n".
+		"Reply-To: \"$namefrom\" <$emailfrom>\r\n".
+		"Content-Type: text/plain; charset=\"".get_settings('blog_charset')."\"\r\n";
+		if ( !empty($namefrom) )
+			$headers .= "From:  $namefrom <$emailfrom>\r\n";
+		else if ( !empty($emailfrom) )
+			$headers .= "From:  - $namefrom <$emailfrom>\r\n";
+
+		$message = 
+		"Name: $namefrom\r\n".
+		"Email: $emailfrom\r\n".
+		
+		'Subject: '.$_POST['subject'.$n]."\r\n\r\n".
+		wordwrap($comments, 76, "\r\n")."\r\n\r\n".
+		'Referer: '.$_SERVER['HTTP_REFERER']."\r\n".
+		'Browser: '.$_SERVER['HTTP_USER_AGENT']."\r\n";
+
 		if (is_uploaded_file($fileatt)) {
 		  // Read the file to be attached ('rb' = read binary)
 		  $file = fopen($fileatt,'rb');
@@ -212,10 +214,7 @@ function process_form() {
 		
 		// Send the completed message
 		
-		$envs = array("HTTP_USER_AGENT", "REMOTE_ADDR", "REMOTE_HOST");
-		foreach ($envs as $env)
-		$message .= "$env: $_SERVER[$env]\n";
-		
+
 		if(!mail($to,$subject,$message,$headers)) {
 			exit("Mail could not be sent. Sorry! An error has occurred, please report this to the website administrator.\n");
 		} else {

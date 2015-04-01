@@ -3,7 +3,7 @@
 Plugin Name: WP Sup Contact Form
 Plugin URI: http://uspdev.net/wpscf-contact-form-wordpress-plugins/
 Description:  WP Sup Contact Form, display contact form field on the post/page easy using Shortcode. This contact form support for file attachment or file upload.
-Version: 0.0.5
+Version: 0.0.6
 Author: Uspdev
 Author URI: http://uspdev.net
 License: GPLv2 or later
